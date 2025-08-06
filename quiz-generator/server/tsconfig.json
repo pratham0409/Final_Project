@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs", // 👈 RECOMMENDED for Node.js
+    "rootDir": "./src", // 👈 Organizes your files
+    "outDir": "./dist", // 👈 Compiled JS goes here
+    "strict": true,
+    "esModuleInterop": true, // 👈 Needed for Express/CORS imports
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node"
+    ], // 👈 Fixes type issues in Node
+    "sourceMap": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
