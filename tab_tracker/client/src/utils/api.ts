@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000/api';
+
+const API_BASE = 'https://your-render-url.onrender.com/api';
 
 export async function sendLog(log: {
     timestamp: string;
