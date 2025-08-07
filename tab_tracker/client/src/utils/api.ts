@@ -1,5 +1,5 @@
 
-const API_BASE = 'https://your-render-url.onrender.com/api';
+const API_BASE = 'https://tab-tracker-5m2m.onrender.com/api';
 
 export async function sendLog(log: {
     timestamp: string;
