@@ -2,6 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import loggerRoutes from './routes/logger.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,8 +18,7 @@ app.use(express.json());
 app.use('/api', loggerRoutes);
 
 // MongoDB Connection
-const MONGO_URI = 'mongodb+srv://quizuser:quizpass123@quiz-generator.zdci8fm.mongodb.net/Tab_tracker?retryWrites=true&w=majority&appName=Quiz-generator';
-
+const MONGO_URI = process.env.MONGO_URI!;
 
 mongoose.connect(MONGO_URI)
     .then(() => {
