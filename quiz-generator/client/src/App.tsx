@@ -8,7 +8,7 @@ type Question = {
 };
 
 function fetchQuiz<T>(topic: string): Promise<T[]> {
-  return axios.post('http://localhost:5000/api/quiz', { topic }).then(res => res.data);
+  return axios.post('https://quiz-master-pqan.onrender.com/api/quiz', { topic }).then(res => res.data);
 }
 
 const App: React.FC = () => {
@@ -40,11 +40,11 @@ const App: React.FC = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/response', response);
+      const res = await axios.post('https://quiz-master-pqan.onrender.com/api/response', response);
       if (res.data.correct) {
         setScore(prev => prev + 1);
       }
-    } catch {}
+    } catch { }
 
     setCurrent(prev => prev + 1);
   };
